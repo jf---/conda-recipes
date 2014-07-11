@@ -8,9 +8,9 @@ source:
 #   patches:
 #     - my.patch
 
-# build:
-#   number: 1
-#   binary_relocation: true # (defaults to true)
+build:
+  number: 1
+  binary_relocation: true # (defaults to true)
 
 requirements:
   build:

@@ -2,6 +2,7 @@
 set -e
 
 backup_prefix=$PREFIX
+echo $PREFIX
 
 ncpus=1
 if test -x /usr/bin/getconf; then
@@ -38,8 +39,8 @@ echo "Starting build with -j$ncpus ..."
 # Builds generate around 9,000 lines of output, trim them to see test
 # results.
 make -j$ncpus | grep Built
-
-# Run OCE tests
-echo "Timestamp" && date
-make test
-
+make install
+#
+## Run OCE tests
+#echo "Timestamp" && date
+#make test
